@@ -79,7 +79,7 @@ const SiteSection = () => {
                 <Container
                   
                 >
-                  <img src={Logo} width={700} />
+                  <img src={Logo} width={600} />
                 </Container>
               </Grid>
             </Grid>
