@@ -82,7 +82,7 @@ const SiteSectionMid = () => {
               </Grid>
               <Grid Item sm={3} alignContent={"center"}> 
                 <Container>
-                <img src={vector} height={300} />
+                <img src={vector} height={200} />
                 </Container>
               </Grid>
             </Grid>
