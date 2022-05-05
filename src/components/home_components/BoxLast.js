@@ -61,7 +61,7 @@ const SiteSectionLast = () => {
                 <Container
                   
                 >
-                  <img src={icon2}  width={750}/>
+                  <img src={icon2}  width={600}/>
                 </Container>
               </Grid>
             </Grid>
