@@ -54,7 +54,7 @@ const SiteSectionFourth = () => {
           <Stack direction={"row"}>
             <Grid container>
               <Grid Item sm={12} alignContent={"center"}>
-               <img src={group} width={1200} />
+               <img src={group} width={750} />
                 
               </Grid>
               

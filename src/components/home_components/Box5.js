@@ -57,7 +57,7 @@ const SiteSectionFifth = () => {
           <Stack direction={"row"}>
             <Grid container>
               <Grid Item sm={3} alignContent={"center"}>
-               <img src={vector2} width={1000}/>
+               <img src={vector2} width={750}/>
                 
               </Grid>
             </Grid>
