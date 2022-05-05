@@ -81,13 +81,7 @@ const SiteSectionSecond = () => {
         >
           <Stack direction={"row"}>
             <Grid container>
-              <Grid Item sm={1} alignContent={"center"}>
-                <Container></Container>
-              </Grid>
-              <Grid Item sm={3} alignContent={"center"}>
-                <Container></Container>
-              </Grid>
-              <Grid Item sm={7} alignContent={"center"}>
+              <Grid Item sm={12} alignContent={"center"}>
                 <Container>
                   <Typography align="center">
                     {" "}
