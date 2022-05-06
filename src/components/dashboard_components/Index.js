@@ -102,7 +102,7 @@ export default function Dashboard() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} color={'white'}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -116,8 +116,8 @@ export default function Dashboard() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
+          <Typography variant="h6" noWrap component="div" color={'black'}>
+            Company Text
           </Typography>
         </Toolbar>
       </AppBar>
