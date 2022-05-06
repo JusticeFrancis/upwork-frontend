@@ -110,6 +110,8 @@ export default function Dashboard() {
           IconButton={<IconButton />}
           MenuIcon={<MenuIcon />}
           Typography={<Typography />}
+          open = {open}
+          AppBar = {<AppBar />}
         />
       </AppBar>
       <Drawer variant="permanent" open={open}>
