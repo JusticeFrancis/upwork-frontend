@@ -41,12 +41,7 @@ const useStyles = makeStyles({
   fullList: {
     width: "auto"
   },
-  paper: {
-    background: "blue"
-  },
-  background: {
-    background: "blue"
-  }
+ 
 });
 
 const openedMixin = (theme) => ({

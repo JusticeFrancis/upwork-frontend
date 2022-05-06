@@ -23,7 +23,6 @@ const Body = () => {
   return (
     <>
       <DrawerHeader />
-     <Container fixed>
      <Typography paragraph>
         <Grid container spacing={1}>
           <Grid item sm={3} xs={12}>
@@ -217,7 +216,6 @@ const Body = () => {
           </Grid>
         </Grid>
       </Typography>
-     </Container>
     </>
   );
 };

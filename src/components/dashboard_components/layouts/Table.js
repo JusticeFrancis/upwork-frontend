@@ -339,7 +339,6 @@ class EnhancedTable extends React.Component {
     order: "asc",
     orderBy: "calories",
     selected: [],
-    backgroundColor: "blue",
     data: [
       createData(
         "Justice Francis",
