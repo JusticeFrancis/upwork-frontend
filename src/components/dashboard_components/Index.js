@@ -19,7 +19,6 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import Body from "./layouts/Body";
 import MenuListBar from "./layouts/MenuList";
-import ToolBarComponent from "./layouts/ToolBarComponent";
 
 const drawerWidth = 240;
 
@@ -104,15 +103,23 @@ export default function Dashboard() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <ToolBarComponent
-          handleDrawerOpen={handleDrawerOpen}
-          Toolbar={<Toolbar />}
-          IconButton={<IconButton />}
-          MenuIcon={<MenuIcon />}
-          Typography={<Typography />}
-          open = {open}
-          AppBar = {<AppBar />}
-        />
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{
+              marginRight: 5,
+              ...(open && { display: "none" }),
+            }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap component="div">
+            Mini variant drawer
+          </Typography>
+        </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
