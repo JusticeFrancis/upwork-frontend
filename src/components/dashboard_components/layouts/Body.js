@@ -1,5 +1,15 @@
 import Typography from "@mui/material/Typography";
 import { styled, useTheme } from "@mui/material/styles";
+import { Grid } from "@mui/material";
+import { Box } from "@mui/system";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
+import Avatar from "@mui/material/Avatar";
+import AvatarGroup from "@mui/material/AvatarGroup";
+import EnhancedTable from "./Table";
+import Container from '@mui/material/Container';
 
 const Body = () => {
   const DrawerHeader = styled("div")(({ theme }) => ({
@@ -13,34 +23,201 @@ const Body = () => {
   return (
     <>
       <DrawerHeader />
-      <Typography paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus
-        non enim praesent elementum facilisis leo vel. Risus at ultrices mi
-        tempus imperdiet. Semper risus in hendrerit gravida rutrum quisque non
-        tellus. Convallis convallis tellus id interdum velit laoreet id donec
-        ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl
-        suscipit adipiscing bibendum est ultricies integer quis. Cursus euismod
-        quis viverra nibh cras. Metus vulputate eu scelerisque felis imperdiet
-        proin fermentum leo. Mauris commodo quis imperdiet massa tincidunt. Cras
-        tincidunt lobortis feugiat vivamus at augue. At augue eget arcu dictum
-        varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt.
-        Lorem donec massa sapien faucibus et molestie ac.
+     <Container fixed>
+     <Typography paragraph>
+        <Grid container spacing={1}>
+          <Grid item sm={3} xs={12}>
+            <Card variant="outlined">
+              <CardContent>
+                <hr
+                  style={{
+                    backgroundColor: "green",
+                    height: "4px",
+                    borderRadius: "10px",
+                  }}
+                />
+                <p style={{ color: "green", fontWeight: "bolder" }}>Manager</p>
+                <p style={{ fontSize: "11px" }}>
+                  {" "}
+                  Consequat mauris nunc congue nisi vitae suscipit. Fringilla
+                  est ullamcorper eget nulla facilisi etiam dignissim diam.
+                  Pulvinar elementum integer enim neque volutpat ac tincidunt.
+                </p>
+                <Grid container paddingLeft={0} spacing={5}>
+                  <Grid item sm={9}>
+                    <AvatarGroup total={24}>
+                      <Avatar
+                        alt="Remy Sharp"
+                        src="/static/images/avatar/1.jpg"
+                      />
+                      <Avatar
+                        alt="Travis Howard"
+                        src="/static/images/avatar/2.jpg"
+                      />
+                      <Avatar
+                        alt="Agnes Walker"
+                        src="/static/images/avatar/4.jpg"
+                      />
+                      <Avatar
+                        alt="Trevor Henderson"
+                        src="/static/images/avatar/5.jpg"
+                      />
+                    </AvatarGroup>
+                  </Grid>
+                  <Grid item sm={3} marginTop={1}>
+                    <DriveFileRenameOutlineIcon />
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item sm={3} xs={12}>
+            <Card variant="outlined">
+              <CardContent>
+                <hr
+                  style={{
+                    backgroundColor: "purple",
+                    height: "4px",
+                    borderRadius: "10px",
+                  }}
+                />
+                <p style={{ color: "purple", fontWeight: "bolder" }}>Admin</p>
+                <p style={{ fontSize: "11px" }}>
+                  {" "}
+                  Consequat mauris nunc congue nisi vitae suscipit. Fringilla
+                  est ullamcorper eget nulla facilisi etiam dignissim diam.
+                  Pulvinar elementum integer enim neque volutpat ac tincidunt.
+                </p>
+                <Grid container paddingLeft={0} spacing={5}>
+                  <Grid item sm={9}>
+                    <AvatarGroup total={24}>
+                      <Avatar
+                        alt="Remy Sharp"
+                        src="/static/images/avatar/1.jpg"
+                      />
+                      <Avatar
+                        alt="Travis Howard"
+                        src="/static/images/avatar/2.jpg"
+                      />
+                      <Avatar
+                        alt="Agnes Walker"
+                        src="/static/images/avatar/4.jpg"
+                      />
+                      <Avatar
+                        alt="Trevor Henderson"
+                        src="/static/images/avatar/5.jpg"
+                      />
+                    </AvatarGroup>
+                  </Grid>
+                  <Grid item sm={3} marginTop={1}>
+                    <DriveFileRenameOutlineIcon />
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item sm={3} xs={12}>
+            <Card variant="outlined">
+              <CardContent>
+                <hr
+                  style={{
+                    backgroundColor: "darkorange",
+                    height: "4px",
+                    borderRadius: "10px",
+                  }}
+                />
+                <p style={{ color: "darkorange", fontWeight: "bolder" }}>Welfare</p>
+                <p style={{ fontSize: "11px" }}>
+                  {" "}
+                  Consequat mauris nunc congue nisi vitae suscipit. Fringilla
+                  est ullamcorper eget nulla facilisi etiam dignissim diam.
+                  Pulvinar elementum integer enim neque volutpat ac tincidunt.
+                </p>
+                <Grid container paddingLeft={0} spacing={5}>
+                  <Grid item sm={9}>
+                    <AvatarGroup total={24}>
+                      <Avatar
+                        alt="Remy Sharp"
+                        src="/static/images/avatar/1.jpg"
+                      />
+                      <Avatar
+                        alt="Travis Howard"
+                        src="/static/images/avatar/2.jpg"
+                      />
+                      <Avatar
+                        alt="Agnes Walker"
+                        src="/static/images/avatar/4.jpg"
+                      />
+                      <Avatar
+                        alt="Trevor Henderson"
+                        src="/static/images/avatar/5.jpg"
+                      />
+                    </AvatarGroup>
+                  </Grid>
+                  <Grid item sm={3} marginTop={1}>
+                    <DriveFileRenameOutlineIcon />
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item sm={3} xs={12}>
+            <Card variant="outlined">
+              <CardContent>
+                <hr
+                  style={{
+                    backgroundColor: "darkblue",
+                    height: "4px",
+                    borderRadius: "10px",
+                  }}
+                />
+                <p style={{ color: "darkblue", fontWeight: "bolder" }}>Recruiter</p>
+                <p style={{ fontSize: "11px" }}>
+                  {" "}
+                  Consequat mauris nunc congue nisi vitae suscipit. Fringilla
+                  est ullamcorper eget nulla facilisi etiam dignissim diam.
+                  Pulvinar elementum integer enim neque volutpat ac tincidunt.
+                </p>
+                <Grid container paddingLeft={0} spacing={5}>
+                  <Grid item sm={9}>
+                    <AvatarGroup total={24}>
+                      <Avatar
+                        alt="Remy Sharp"
+                        src="/static/images/avatar/1.jpg"
+                      />
+                      <Avatar
+                        alt="Travis Howard"
+                        src="/static/images/avatar/2.jpg"
+                      />
+                      <Avatar
+                        alt="Agnes Walker"
+                        src="/static/images/avatar/4.jpg"
+                      />
+                      <Avatar
+                        alt="Trevor Henderson"
+                        src="/static/images/avatar/5.jpg"
+                      />
+                    </AvatarGroup>
+                  </Grid>
+                  <Grid item sm={3} marginTop={1}>
+                    <DriveFileRenameOutlineIcon />
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+        
       </Typography>
       <Typography paragraph>
-        Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-        ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar elementum
-        integer enim neque volutpat ac tincidunt. Ornare suspendisse sed nisi
-        lacus sed viverra tellus. Purus sit amet volutpat consequat mauris.
-        Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-        vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra
-        accumsan in. In hendrerit gravida rutrum quisque non tellus orci ac.
-        Pellentesque nec nam aliquam sem et tortor. Habitant morbi tristique
-        senectus et. Adipiscing elit duis tristique sollicitudin nibh sit.
-        Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra
-        maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
-        aliquam ultrices sagittis orci a.
+        
+        <Grid container>
+          <Grid item>
+          <EnhancedTable />
+          </Grid>
+        </Grid>
       </Typography>
+     </Container>
     </>
   );
 };

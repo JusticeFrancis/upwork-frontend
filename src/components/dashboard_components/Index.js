@@ -19,8 +19,35 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import Body from "./layouts/Body";
 import MenuListBar from "./layouts/MenuList";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import { Avatar, Chip, Grid } from "@mui/material";
+import Alarm from "@mui/icons-material/Alarm";
+import FaceIcon from "@mui/icons-material/Face";
+import { makeStyles } from "@mui/styles";
+import SecurityIcon from '@mui/icons-material/Security';
+import GroupIcon from '@mui/icons-material/Group';
+import ArchiveIcon from '@mui/icons-material/Archive';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import SettingsIcon from '@mui/icons-material/Settings';
+
 
 const drawerWidth = 240;
+
+const useStyles = makeStyles({
+  list: {
+    width: 250
+  },
+  fullList: {
+    width: "auto"
+  },
+  paper: {
+    background: "blue"
+  },
+  background: {
+    background: "blue"
+  }
+});
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -70,24 +97,10 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-const Drawer = styled(MuiDrawer, {
-  shouldForwardProp: (prop) => prop !== "open",
-})(({ theme, open }) => ({
-  width: drawerWidth,
-  flexShrink: 0,
-  whiteSpace: "nowrap",
-  boxSizing: "border-box",
-  ...(open && {
-    ...openedMixin(theme),
-    "& .MuiDrawer-paper": openedMixin(theme),
-  }),
-  ...(!open && {
-    ...closedMixin(theme),
-    "& .MuiDrawer-paper": closedMixin(theme),
-  }),
-}));
+
 
 export default function Dashboard() {
+  const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -102,46 +115,75 @@ export default function Dashboard() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} color={'white'}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: "none" }),
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div" color={'black'}>
-            Company Text
-          </Typography>
-        </Toolbar>
+      <AppBar
+        position="fixed"
+        open={open}
+        style={{ backgroundColor: "white", color: "black" }}
+      >
+        <Box flexDirection={"row"}>
+          <Stack direction={"row"}>
+            <Toolbar>
+             {/*  <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                edge="start"
+                sx={{
+                  marginRight: 1,
+                  ...(open && { display: "none" }),
+                }}
+              >
+                <MenuIcon />
+              </IconButton> */}
+              <Typography variant="h6" style={{ fontSize: '25px' }} noWrap component="div">
+                <span style={{ fontWeight:'bolder' }}>Company</span> Text
+              </Typography>
+              <Box display={"flex"}></Box>
+            </Toolbar>
+            <Grid
+              variant="outlined"
+             
+              sx={{
+                mx: 1,
+                right: 8,
+                mb: 4,
+                position: "absolute",
+                fontSize: 14,
+              }} /* endIcon={<SendIcon />} */
+            >
+              <Stack direction="row" spacing={1} sx={{ mt: 2 }} >
+                <Avatar sx={{ width: 30, height: 30 }} >
+                  <Alarm />
+                </Avatar>
+                <Avatar sx={{ width: 30, height: 30}} >
+                  <Alarm />
+                </Avatar>
+                <Avatar sx={{ width: 30, height: 30 }}>F</Avatar>
+                <Typography component="h6">
+  <Typography style={{ fontSize: 13 }} sx={{ width: 30, height: 30 }} variant="h6" component="h6">
+  <span>name</span> <span style={{ color: 'green', border:'1px solid green', borderRadius: '5px', padding: '2px' }}>online</span>
+</Typography>
+</Typography>
+              </Stack>
+            </Grid>
+          </Stack>
+        </Box>
       </AppBar>
-      <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "rtl" ? (
-              <ChevronRightIcon />
-            ) : (
-              <ChevronLeftIcon />
-            )}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
+        <div style={{ backgroundColor: '#004E7A', height:'700px', marginTop:'60px' }}>
+
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {["home", "permission", "employed", "archive","calendar", "settings"].map((text, index) => (
             <ListItemButton
               key={text}
+              alignItems={'center'}
               sx={{
                 minHeight: 48,
-                justifyContent: open ? "initial" : "center",
-                px: 2.5,
+                justifyContent: 'center',
+                margin:'10px',
+                
               }}
             >
+              <div>
               <ListItemIcon
                 sx={{
                   minWidth: 0,
@@ -149,13 +191,19 @@ export default function Dashboard() {
                   justifyContent: "center",
                 }}
               >
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index === 0 ? <MailIcon sx={{ fontSize: 30,color:'white' }} /> : null}
+                {index === 1 ? <SecurityIcon sx={{ fontSize: 30,color:'white' }} /> : null}
+                {index === 2 ? <GroupIcon sx={{ fontSize: 30,color:'white' }} /> : null}
+                {index === 3 ? <ArchiveIcon sx={{ fontSize: 30,color:'white' }} /> : null}
+                {index === 4 ? <CalendarTodayIcon sx={{ fontSize: 30,color:'white' }} /> : null}
+                {index === 5 ? <SettingsIcon sx={{ fontSize: 30,color:'white' }} /> : null}
               </ListItemIcon>
-              <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+              <p style={{ margin:'0px', textAlign:'center', fontSize:'8px', color:'white' }}>{text}</p>
+              </div> 
             </ListItemButton>
           ))}
         </List>
-      </Drawer>
+        </div>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Body />
       </Box>
